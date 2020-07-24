@@ -17,8 +17,37 @@ secundario. Cada fila corresponde a las notas y al promedio de cada alumno.
  */
 package matrices_c;
 
+import java.util.Scanner;
+
 public class Matrices_c {
     public static void main(String[] args) {
+        final int cantAlumnos = 4;
+        final int cantNotas = 4;
+        float tabla[][] = new float[cantAlumnos][cantNotas];
+        float promedio = 0;
+        Scanner entrada = new Scanner(System.in);
         
+        for(int f=0; f<cantAlumnos; f++){
+            for(int c=0; c<cantNotas; c++){
+                if(c == cantNotas-1){
+                    tabla[f][c] = promedio/(cantNotas -1);
+                    promedio = 0;
+                    break;
+                }
+                System.out.print("Alumno "+(f+1)+", Nota "+(c+1)+": ");
+                tabla[f][c] = entrada.nextFloat();
+                promedio+=tabla[f][c];
+            }
+        }
+        entrada.close();
+        
+        System.out.println("\t\tNota 1 \t\tNota 2 \t\tNota 3 \t\tProm");
+        for(int f=0; f<cantAlumnos; f++){
+            System.out.print("Alumno "+(f+1));
+            for(int c=0; c<cantNotas; c++){
+                System.out.print("\t "+tabla[f][c]+"\t");
+            }
+            System.out.println("");
+        }
     }
 }
