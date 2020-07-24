@@ -28,11 +28,14 @@ public class Vectores_e {
         int indiceMin, indiceMax;
         
         for(int i=0; i<ciudades.length; i++){
-            System.out.print("Ingresar ciudad, tºC máxima y tºC mínima: ");
-            ciudades[i] = entrada.next();
+            System.out.print("Ingresar ciudad: ");
+            ciudades[i] = entrada.nextLine();
+            System.out.print("Ingresar tºC máxima y tºC mínima: ");
             tempMaximas[i] = entrada.nextInt();
             tempMinimas[i] = entrada.nextInt();
+            entrada.nextLine(); //limpio el buffer
         }
+        entrada.close();
         
         tMin = tempMinimas[0];
         indiceMin = 0;
