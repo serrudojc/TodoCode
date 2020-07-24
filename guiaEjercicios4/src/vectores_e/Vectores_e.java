@@ -25,6 +25,7 @@ public class Vectores_e {
         int tempMinimas[] = new int[5];
         Scanner entrada = new Scanner(System.in);
         int tMin, tMax;
+        int indiceMin, indiceMax;
         
         for(int i=0; i<ciudades.length; i++){
             System.out.print("Ingresar ciudad, tºC máxima y tºC mínima: ");
@@ -34,6 +35,23 @@ public class Vectores_e {
         }
         
         tMin = tempMinimas[0];
-        for(int i=0; i<)
+        indiceMin = 0;
+        for(int i=0; i<tempMinimas.length; i++){
+            if(tempMinimas[i]<tMin){
+                tMin = tempMinimas[i];
+                indiceMin = i;
+            }
+        }
+        System.out.println(ciudades[indiceMin]+" tuvo la menor temperatura y fue "+tempMinimas[indiceMin]+"ºC");
+        
+        tMax = tempMaximas[0];
+        indiceMax = 0;
+        for(int i=0; i<tempMaximas.length; i++){
+            if(tempMaximas[i]>tMax){
+                tMax = tempMaximas[i];
+                indiceMax = i;
+            }
+        }
+        System.out.println(ciudades[indiceMax]+" tuvo la mayor temperatura y fue "+tempMaximas[indiceMax]+"ºC");
     }
 }
