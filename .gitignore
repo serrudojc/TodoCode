@@ -22,3 +22,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /guiaEjercicios4/dist/
+/guiaEjercicios6/nbproject/private/
+/vectores/nbproject/private/
+/vectores/build/
+/matrices01/nbproject/private/
+/matrices02/nbproject/private/
+/matrices03/nbproject/private/
+/matrices01/build/
+/matrices02/build/
+/matrices03/build/
